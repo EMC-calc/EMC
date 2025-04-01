@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Proportionality Theorem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            background: #f9fbfc;
+            line-height: 1.6;
+            color: #2d2d2d;
+            overflow: auto;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 90px auto 70px;
+            padding: 60px;
+            background: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #0f5ab5;
+            font-size: 3.8em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        .theorem-section {
+            background: #f9fbfc;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(15, 90, 181, 0.1);
+        }
+        .theorem-section h2 {
+            color: #123d82;
+            font-size: 2.4em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.8px;
+            border-bottom: 2px solid #0f5ab5;
+            padding-bottom: 5px;
+        }
+        .figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        svg {
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+        .theorem, .proof {
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 4px solid #0f5ab5;
+        }
+        .proof-step {
+            margin: 10px 0;
+        }
+        .math {
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+                margin: 50px auto;
+            }
+            h1 {
+                font-size: 2.8em;
+            }
+            .theorem-section h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Proportionality Theorem</h1>
+
+        <div class="theorem-section">
+            <h2>Theorem and Proof</h2>
+
+            <div class="figure">
+                <h3>Triangle ABC with DE || BC</h3>
+                <svg width="300" height="200">
+                    <!-- Triangle ABC -->
+                    <polygon points="150,50 50,150 250,150" fill="none" stroke="#333" stroke-width="2"/>
+                    <!-- Line DE -->
+                    <line x1="90" y1="110" x2="210" y2="110" stroke="#333" stroke-width="2"/>
+                    <!-- Labels -->
+                    <text x="145" y="40" font-size="14">A</text>
+                    <text x="40" y="155" font-size="14">B</text>
+                    <text x="260" y="155" font-size="14">C</text>
+                    <text x="85" y="105" font-size="14">D</text>
+                    <text x="215" y="105" font-size="14">E</text>
+                </svg>
+            </div>
+
+            <div class="theorem">
+                <h3>BPT Theorem Statement</h3>
+                <p>If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio.</p>
+                <p><strong>Given:</strong> Δ ABC where DE || BC</p>
+                <p><strong>To Prove:</strong> AD/DB = AE/EC</p>
+            </div>
+
+            <div class="proof">
+                <h3>Proof of BPT</h3>
+                <div class="proof-step">
+                    <p><strong>Construction:</strong> Join BE and CD. Draw DM ⊥ AC and EN ⊥ AB.</p>
+                </div>
+                <div class="proof-step">
+                    <p><strong>Step 1:</strong> Area of triangle ADE:</p>
+                    <p class="math">ar(ADE) = ½ × Base × Height = ½ × AD × EN ... (1)</p>
+                    <p>Area of triangle BDE:</p>
+                    <p class="math">ar(BDE) = ½ × Base × Height = ½ × DB × EN ... (2)</p>
+                </div>
+                <div class="proof-step">
+                    <p><strong>Step 2:</strong> Alternative area of triangle ADE:</p>
+                    <p class="math">ar(ADE) = ½ × Base × Height = ½ × AE × DM ... (3)</p>
+                    <p>Area of triangle DEC:</p>
+                    <p class="math">ar(DEC) = ½ × Base × Height = ½ × EC × DM ... (4)</p>
+                </div>
+                <div class="proof-step">
+                    <p><strong>Step 3:</strong> Divide (1) and (2):</p>
+                    <p class="math">ar(ADE) / ar(BDE) = (½ × AD × EN) / (½ × DB × EN) = AD / DB ... (A)</p>
+                    <p>Divide (3) and (4):</p>
+                    <p class="math">ar(ADE) / ar(DEC) = (½ × AE × DM) / (½ × EC × DM) = AE / EC ... (B)</p>
+                </div>
+                <div class="proof-step">
+                    <p><strong>Step 4:</strong> Triangles BDE and DEC are on the same base DE and between the same parallel lines BC and DE:</p>
+                    <p class="math">∴ ar(BDE) = ar(DEC)</p>
+                    <p>Hence,</p>
+                    <p class="math">ar(ADE) / ar(BDE) = ar(ADE) / ar(DEC)</p>
+                    <p>From (A) and (B):</p>
+                    <p class="math">AD / DB = AE / EC</p>
+                    <p>Hence Proved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
